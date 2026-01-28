@@ -51,38 +51,18 @@ const projects = [
     text: 'Oversized cargo van Rotterdam naar Hamburg inclusief vergunningen.',
   },
 ];
-
-const news = [
-  {
-    title: 'Nieuwe elektrische bestelwagens toegevoegd',
-    date: '12 maart 2024',
-    text: 'Onze vloot groeit met duurzame voertuigen voor emissievrije stadsdistributie.',
-  },
-  {
-    title: 'Miya Transport behaalt ISO-certificering',
-    date: '28 februari 2024',
-    text: 'Een extra bevestiging van onze focus op kwaliteit, veiligheid en procesbeheersing.',
-  },
-  {
-    title: 'Extra distributieroute naar Zuid-Duitsland',
-    date: '10 februari 2024',
-    text: 'Wekelijkse vaste planning voor snelle leveringen richting München en omgeving.',
-  },
-];
-
 export default function Home() {
   return (
     <div className="page">
       <header className="header">
         <div className="container nav">
           <a className="logo" href="/">
-            <img src="/miya-logo.svg" alt="Miya Transport logo" />
+            <img src="/miyazwart.png" alt="Miya Transport logo" />
           </a>
           <nav className="nav-links">
             <a href="/over-ons">Over Ons</a>
             <a href="/diensten">Diensten</a>
             <a href="/projecten">Projecten & Referenties</a>
-            <a href="/nieuws">Nieuws & Updates</a>
             <a className="nav-cta" href="/offerte">
               Vraag Offerte Aan
             </a>
@@ -94,7 +74,7 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="container hero-content">
           <div className="hero-text">
-            <p className="eyebrow">MIYA TRANSPORT</p>
+            <p className="eyebrow"></p>
             <h1>
               Betrouwbaar Transport <span>Door Heel Europa</span>
             </h1>
@@ -225,33 +205,13 @@ export default function Home() {
               <article className="project-card" key={project.title}>
                 <h3>{project.title}</h3>
                 <p>{project.text}</p>
-                <span>Bekijk case</span>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section light" id="nieuws">
-        <div className="container">
-          <div className="section-title">
-            <h2>
-              Nieuws & <span>Updates</span>
-            </h2>
-            <p>Blijf op de hoogte van onze ontwikkelingen en uitbreidingen.</p>
-          </div>
-          <div className="news-grid">
-            {news.map((item) => (
-              <article className="news-card" key={item.title}>
-                <p className="news-date">{item.date}</p>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
+    
       <section className="section image-cta" id="offerte">
         <div className="overlay" />
         <div className="container cta-card">

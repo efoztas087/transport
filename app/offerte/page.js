@@ -4,13 +4,12 @@ export default function Offerte() {
       <header className="header">
         <div className="container nav">
           <a className="logo" href="/">
-            <img src="/miya-logo.svg" alt="Miya Transport logo" />
+            <img src="/miyazwart.png" alt="Miya Transport logo" />
           </a>
           <nav className="nav-links">
             <a href="/over-ons">Over Ons</a>
             <a href="/diensten">Diensten</a>
             <a href="/projecten">Projecten & Referenties</a>
-            <a href="/nieuws">Nieuws & Updates</a>
             <a className="nav-cta" href="/offerte">
               Vraag Offerte Aan
             </a>
