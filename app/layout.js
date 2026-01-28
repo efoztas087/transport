@@ -4,9 +4,9 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Miya Transport | Allround logistieke partner',
+  title: 'Miya Transport | Professioneel transportbedrijf',
   description:
-    'Miya Transport verzorgt nationaal en internationaal transport: wegtransport, express zendingen, pallets, gekoeld vervoer en maatwerk logistiek.',
+    'Miya Transport biedt betrouwbare transportoplossingen in Nederland en Europa. Nationaal transport, internationaal vervoer, spoedtransport, distributie en warehousing.',
 };
 
 export default function RootLayout({ children }) {
