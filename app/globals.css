@@ -73,7 +73,7 @@ img {
   align-items: center;
   gap: 1.5rem;
   color: #000000;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .nav-links a:hover {
@@ -203,7 +203,7 @@ img {
 }
 
 .section.soft {
-  background: #ffffff00;
+  background: #9797971c;
 }
 
 .section.dark {
