@@ -239,9 +239,6 @@ export default function Home() {
             <a className="button primary" href="/offerte">
               Vraag Offerte Aan
             </a>
-            <a className="button ghost" href="tel:+31612345678">
-              +31 6 1234 5678
-            </a>
           </div>
         </div>
       </section>
@@ -304,12 +301,10 @@ export default function Home() {
             <div className="contact-cards">
               <div>
                 <h4>Adres</h4>
-                <p>Transportweg 123</p>
-                <p>1234 AB Amsterdam</p>
+                <p>Duiveland 3A</p>
+                <p>1948 RB Beverwijk</p>
               </div>
               <div>
-                <h4>Telefoon</h4>
-                <p>+31 6 1234 5678</p>
               </div>
               <div>
                 <h4>E-mail</h4>
@@ -392,9 +387,9 @@ export default function Home() {
           <div>
             <h4>Contact</h4>
             <ul>
-              <li>Transportweg 123</li>
-              <li>1234 AB Amsterdam</li>
-              <li>+31 6 1234 5678</li>
+              <li></li>
+              <li>Duiveland 3A</li>
+              <li>1948 RB Beverwijk</li>
               <li>info@miyatransport.nl</li>
               <li>24/7 bereikbaar</li>
             </ul>

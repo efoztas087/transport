@@ -98,9 +98,8 @@ export default function OverOns() {
           <div>
             <h4>Contact</h4>
             <ul>
-              <li>Transportweg 123</li>
-              <li>1234 AB Amsterdam</li>
-              <li>+31 6 1234 5678</li>
+              <li>Duiveland 3A</li>
+              <li>1948 RB Beverwijk</li>
               <li>info@miyatransport.nl</li>
             </ul>
           </div>
@@ -114,7 +113,6 @@ export default function OverOns() {
                 <a href="/projecten">Projecten</a>
               </li>
               <li>
-                <a href="/nieuws">Nieuws</a>
               </li>
               <li>
                 <a href="/offerte">Offerte aanvragen</a>

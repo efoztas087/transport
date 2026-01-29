@@ -32,12 +32,11 @@ export default function Contact() {
             <div className="contact-cards">
               <div>
                 <h4>Adres</h4>
-                <p>Transportweg 123</p>
-                <p>1234 AB Amsterdam</p>
+                <p>Duiveland 3A</p>
+                <p>1948 RB Beverwijk</p>
               </div>
               <div>
-                <h4>Telefoon</h4>
-                <p>+31 6 1234 5678</p>
+                
               </div>
               <div>
                 <h4>E-mail</h4>
@@ -49,22 +48,26 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <form className="form-section">
-            <h3>Stel uw vraag</h3>
+          <form className="form-card">
+            <h3>Contactformulier</h3>
             <label>
-              Naam
-              <input type="text" placeholder="Uw naam" />
+              Bedrijfsnaam
+              <input type="text" placeholder="Uw bedrijfsnaam" />
+            </label>
+            <label>
+              Contactpersoon
+              <input type="text" placeholder="Naam" />
             </label>
             <label>
               E-mailadres
               <input type="email" placeholder="naam@bedrijf.nl" />
             </label>
             <label>
-              Bericht
-              <textarea rows="5" placeholder="Uw vraag of bericht" />
+              Omschrijving
+              <textarea rows="4" placeholder="Vertel ons over uw transportvraag" />
             </label>
             <button type="button" className="button primary full">
-              Verstuur bericht
+              Verstuur aanvraag
             </button>
           </form>
         </div>
@@ -79,9 +82,8 @@ export default function Contact() {
           <div>
             <h4>Contact</h4>
             <ul>
-              <li>+31 6 1234 5678</li>
               <li>info@miyatransport.nl</li>
-              <li>Transportweg 123, Amsterdam</li>
+              <li>Duiveland 3A, Beverwijk</li>
             </ul>
           </div>
         </div>

@@ -15,8 +15,8 @@ const services = [
       'Urgente leveringen binnen Nederland en Europa met directe beschikbaarheid.',
   },
   {
-    title: 'Distributie',
-    description: 'Efficiënte distributie naar meerdere locaties met slimme routeplanning.',
+    title: 'Maritiem Transport',
+    description: 'Efficiënt en betrouwbaar maritiem transport voor al uw zendingen.',
   },
   {
     title: 'Opslag & Warehousing',
@@ -89,7 +89,7 @@ export default function Diensten() {
           </div>
           <div className="image-card">
             <img
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80"
+              src="/vrachtwagens1.png"
               alt="Logistiek overleg"
             />
           </div>
@@ -105,9 +105,8 @@ export default function Diensten() {
           <div>
             <h4>Contact</h4>
             <ul>
-              <li>+31 6 1234 5678</li>
               <li>info@miyatransport.nl</li>
-              <li>Transportweg 123, Amsterdam</li>
+              <li>Duiveland 3A, Beverwijk</li>
             </ul>
           </div>
         </div>

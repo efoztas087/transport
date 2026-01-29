@@ -48,8 +48,8 @@ export default function Offerte() {
               </div>
             </div>
           </div>
-          <form className="form-section">
-            <h3>Offerteformulier</h3>
+          <form className="form-card">
+            <h3>Offerte aanvragen</h3>
             <label>
               Bedrijfsnaam
               <input type="text" placeholder="Uw bedrijfsnaam" />
@@ -59,16 +59,12 @@ export default function Offerte() {
               <input type="text" placeholder="Naam" />
             </label>
             <label>
-              Telefoonnummer
-              <input type="tel" placeholder="+31 6 1234 5678" />
-            </label>
-            <label>
               E-mailadres
               <input type="email" placeholder="naam@bedrijf.nl" />
             </label>
             <label>
-              Transportvraag
-              <textarea rows="5" placeholder="Beschrijving van de zending" />
+              Omschrijving
+              <textarea rows="4" placeholder="Vertel ons over uw transportvraag" />
             </label>
             <button type="button" className="button primary full">
               Verstuur aanvraag
@@ -80,15 +76,13 @@ export default function Offerte() {
       <footer className="footer">
         <div className="container footer-grid">
           <div>
-            <img src="/miya-logo.svg" alt="Miya Transport logo" className="footer-logo" />
             <p>Betrouwbaar transport binnen Nederland en Europa.</p>
           </div>
           <div>
             <h4>Contact</h4>
             <ul>
-              <li>+31 6 1234 5678</li>
               <li>info@miyatransport.nl</li>
-              <li>Transportweg 123, Amsterdam</li>
+              <li>Duiveland 3A, Beverwijk</li>
             </ul>
           </div>
         </div>

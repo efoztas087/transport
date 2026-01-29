@@ -73,7 +73,7 @@ export default function Projecten() {
           </div>
           <div className="image-card">
             <img
-              src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80"
+              src="/vrachtwagen.jpg"
               alt="Projectlogistiek"
             />
           </div>
@@ -83,15 +83,14 @@ export default function Projecten() {
       <footer className="footer">
         <div className="container footer-grid">
           <div>
-            <img src="/miya-logo.svg" alt="Miya Transport logo" className="footer-logo" />
             <p>Betrouwbaar transport binnen Nederland en Europa.</p>
           </div>
           <div>
             <h4>Contact</h4>
             <ul>
-              <li>+31 6 1234 5678</li>
+              
               <li>info@miyatransport.nl</li>
-              <li>Transportweg 123, Amsterdam</li>
+              <li>Duiveland 3A, Beverwijk</li>
             </ul>
           </div>
         </div>
