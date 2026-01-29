@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+
 const services = [
   {
     title: 'Nationaal Transport',
@@ -55,6 +56,7 @@ const projects = [
 ];
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     company: "",
     contact: "",
@@ -101,10 +103,19 @@ export default function Home() {
           <a className="logo" href="/">
             <img src="/miyazwart.png" alt="Miya Transport logo" />
           </a>
-          <nav className="nav-links">
+
+          {/* Hamburger knop */}
+          <button
+            className="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
+          </button>
+
+          <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
             <a href="/over-ons">Over Ons</a>
             <a href="/diensten">Diensten</a>
-            <a href="/projecten">Projecten & Referenties</a>
+            <a href="/projecten">Projecten</a>
             <a className="nav-cta" href="/offerte">
               Vraag Offerte Aan
             </a>

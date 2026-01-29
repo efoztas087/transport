@@ -58,7 +58,6 @@ img {
 }
 
 .nav {
-  margin-left: 290px;
   display: flex;
   justify-content: space-between;
   padding: 1.2rem 0;
@@ -572,4 +571,36 @@ textarea {
   box-shadow: var(--shadow);
   display: grid;
   gap: 1.2rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobiel */
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #111;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem;
+    display: none;
+    gap: 1.5rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }
