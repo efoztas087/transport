@@ -8,7 +8,7 @@ export const metadata = {
   description:
     'Miya Transport biedt betrouwbare transportoplossingen in Nederland en Europa. Nationaal transport, internationaal vervoer, spoedtransport, distributie en warehousing.',
     icons: {
-      icon: '/miyazwart.png',
+      icon: '/m.png',
     },
 };
 

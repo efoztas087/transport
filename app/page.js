@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React from 'react';
 const services = [
   {
     title: 'Nationaal Transport',
@@ -55,22 +55,45 @@ const projects = [
 ];
 
 export default function Home() {
-const [verzonden, setVerzonden] = useState(false);
-
-async function handleSubmit(e) {
-  e.preventDefault();
-
-  const data = new FormData(e.target);
-
-  await fetch("https://formsubmit.co/info@miyatransport.nl", {
-    method: "POST",
-    body: data,
+  const [formData, setFormData] = useState({
+    company: "",
+    contact: "",
+    email: "",
+    message: "",
   });
 
-  setVerzonden(true);
-  e.target.reset();
-}
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Aanvraag succesvol verzonden!");
+      setFormData({
+        company: "",
+        contact: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      alert("Er ging iets mis. Probeer opnieuw.");
+    }
+  };
   return (
     <div className="page">
       <header className="header">
@@ -335,43 +358,58 @@ async function handleSubmit(e) {
               </div>
             </div>
           </div>
-          <form
-            onSubmit={handleSubmit}
-            className="form-card"
-            method="POST"
-          >
+          <form className="form-card"
+            onSubmit={handleSubmit}>
             <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag!" />
             <input type="hidden" name="_captcha" value="false" />
 
             <label>
               Bedrijfsnaam
-              <input type="text" name="company" required />
+              <input
+                type="text"
+                name="company"
+                required
+                value={formData.company}
+                onChange={handleChange}
+              />
             </label>
 
             <label>
               Contactpersoon
-              <input type="text" name="contact" required />
+              <input
+                type="text"
+                name="contact"
+                required
+                value={formData.contact}
+                onChange={handleChange}
+              />
             </label>
 
             <label>
               E-mailadres
-              <input type="email" name="email" required />
+              <input
+                type="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+              />
             </label>
 
             <label>
               Omschrijving
-              <textarea name="message" rows="4" required />
+              <textarea
+                name="message"
+                rows="4"
+                required
+                value={formData.message}
+                onChange={handleChange}
+              />
             </label>
 
             <button type="submit" className="button primary full">
               Verstuur aanvraag
             </button>
-
-            {verzonden && (
-              <p style={{ marginTop: "1rem", color: "#16a34a", fontWeight: "600" }}>
-                ✅ Bedankt! Uw aanvraag is succesvol verzonden. Wij nemen zo snel mogelijk contact met u op.
-              </p>
-            )}
           </form>
         </div>
       </section>
