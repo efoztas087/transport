@@ -211,7 +211,7 @@ export default function Home() {
         </div>
       </section>
 
-    
+
       <section className="section image-cta" id="offerte">
         <div className="overlay" />
         <div className="container cta-card">
@@ -316,24 +316,34 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <form action="/send_email.php" method="POST" className="form-card">
-            <h3>Offerte aanvragen</h3>
+          <form
+            action="https://formsubmit.co/info@miyatransport.nl"
+            method="POST"
+            className="form-card"
+          >
+            <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag!" />
+            <input type="hidden" name="_captcha" value="false" />
+
             <label>
               Bedrijfsnaam
-              <input type="text" name="bedrijf" placeholder="Uw bedrijfsnaam" />
+              <input type="text" name="company" required />
             </label>
+
             <label>
               Contactpersoon
-              <input type="text" name="contactpersoon" placeholder="Naam" />
+              <input type="text" name="contact" required />
             </label>
+
             <label>
               E-mailadres
-              <input type="email" name="email" placeholder="naam@bedrijf.nl" />
+              <input type="email" name="email" required />
             </label>
+
             <label>
               Omschrijving
-              <textarea name="omschrijving" rows="4" placeholder="Vertel ons over uw transportvraag" />
+              <textarea name="message" rows="4" required />
             </label>
+
             <button type="submit" className="button primary full">
               Verstuur aanvraag
             </button>
@@ -344,7 +354,7 @@ export default function Home() {
       <footer className="footer">
         <div className="container footer-grid">
           <div>
-     
+
             <p>
               Uw betrouwbare partner voor professioneel transport binnen Nederland en Europa.
               Snel, veilig en transparant.
