@@ -344,16 +344,12 @@ export default function Home() {
       <footer className="footer">
         <div className="container footer-grid">
           <div>
-            <img src="/miya-logo.svg" alt="Miya Transport logo" className="footer-logo" />
+     
             <p>
               Uw betrouwbare partner voor professioneel transport binnen Nederland en Europa.
               Snel, veilig en transparant.
             </p>
-            <div className="socials">
-              <span>in</span>
-              <span>fb</span>
-              <span>ig</span>
-              <span>yt</span>
+            <div>
             </div>
           </div>
           <div>

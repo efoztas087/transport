@@ -89,7 +89,7 @@ export default function OverOns() {
       <footer className="footer">
         <div className="container footer-grid">
           <div>
-            <img src="/miya-logo.svg" alt="Miya Transport logo" className="footer-logo" />
+            
             <p>
               Uw betrouwbare partner voor professioneel transport binnen Nederland en Europa.
               Snel, veilig en transparant.

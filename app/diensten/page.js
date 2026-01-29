@@ -99,7 +99,7 @@ export default function Diensten() {
       <footer className="footer">
         <div className="container footer-grid">
           <div>
-            <img src="/miya-logo.svg" alt="Miya Transport logo" className="footer-logo" />
+           
             <p>Betrouwbaar transport binnen Nederland en Europa.</p>
           </div>
           <div>
