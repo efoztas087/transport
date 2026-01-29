@@ -338,6 +338,7 @@ async function handleSubmit(e) {
           <form
             onSubmit={handleSubmit}
             className="form-card"
+            method="POST"
           >
             <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag!" />
             <input type="hidden" name="_captcha" value="false" />
