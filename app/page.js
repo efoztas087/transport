@@ -316,25 +316,25 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <form className="form-card">
+          <form action="/send_email.php" method="POST" className="form-card">
             <h3>Offerte aanvragen</h3>
             <label>
               Bedrijfsnaam
-              <input type="text" placeholder="Uw bedrijfsnaam" />
+              <input type="text" name="bedrijf" placeholder="Uw bedrijfsnaam" />
             </label>
             <label>
               Contactpersoon
-              <input type="text" placeholder="Naam" />
+              <input type="text" name="contactpersoon" placeholder="Naam" />
             </label>
             <label>
               E-mailadres
-              <input type="email" placeholder="naam@bedrijf.nl" />
+              <input type="email" name="email" placeholder="naam@bedrijf.nl" />
             </label>
             <label>
               Omschrijving
-              <textarea rows="4" placeholder="Vertel ons over uw transportvraag" />
+              <textarea name="omschrijving" rows="4" placeholder="Vertel ons over uw transportvraag" />
             </label>
-            <button type="button" className="button primary full">
+            <button type="submit" className="button primary full">
               Verstuur aanvraag
             </button>
           </form>
