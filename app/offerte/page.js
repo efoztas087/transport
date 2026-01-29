@@ -1,4 +1,45 @@
+"use client";
+import { useState } from "react";
 export default function Offerte() {
+  const [formData, setFormData] = useState({
+    company: "",
+    contact: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Aanvraag succesvol verzonden!");
+      setFormData({
+        company: "",
+        contact: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      alert("Er ging iets mis. Probeer opnieuw.");
+    }
+  };
   return (
     <div className="page">
       <header className="header">
@@ -48,25 +89,56 @@ export default function Offerte() {
               </div>
             </div>
           </div>
-          <form className="form-card">
-            <h3>Offerte aanvragen</h3>
+           <form className="form-card"
+            onSubmit={handleSubmit}>
+            <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag!" />
+            <input type="hidden" name="_captcha" value="false" />
+
             <label>
               Bedrijfsnaam
-              <input type="text" placeholder="Uw bedrijfsnaam" />
+              <input
+                type="text"
+                name="company"
+                required
+                value={formData.company}
+                onChange={handleChange}
+              />
             </label>
+
             <label>
               Contactpersoon
-              <input type="text" placeholder="Naam" />
+              <input
+                type="text"
+                name="contact"
+                required
+                value={formData.contact}
+                onChange={handleChange}
+              />
             </label>
+
             <label>
               E-mailadres
-              <input type="email" placeholder="naam@bedrijf.nl" />
+              <input
+                type="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+              />
             </label>
+
             <label>
               Omschrijving
-              <textarea rows="4" placeholder="Vertel ons over uw transportvraag" />
+              <textarea
+                name="message"
+                rows="4"
+                required
+                value={formData.message}
+                onChange={handleChange}
+              />
             </label>
-            <button type="button" className="button primary full">
+
+            <button type="submit" className="button primary full">
               Verstuur aanvraag
             </button>
           </form>
