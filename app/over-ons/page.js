@@ -50,7 +50,7 @@ export default function OverOns() {
           </div>
           <div className="image-card">
             <img
-              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80"
+              src="/loods.png"
               alt="Miya Transport team"
             />
           </div>
