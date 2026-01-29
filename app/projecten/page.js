@@ -90,7 +90,8 @@ export default function Projecten() {
             <ul>
               
               <li>info@miyatransport.nl</li>
-              <li>Duiveland 3A, Beverwijk</li>
+              <li>Duiveland 3A, Beverwijk 1948 RB</li>
+
             </ul>
           </div>
         </div>
