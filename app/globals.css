@@ -578,7 +578,7 @@ textarea {
   font-size: 1.8rem;
   background: none;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
@@ -592,7 +592,7 @@ textarea {
     position: absolute;
     top: 80px;
     right: 0;
-    background: #111;
+    background: #ffffff;
     width: 100%;
     flex-direction: column;
     padding: 2rem;
