@@ -115,7 +115,7 @@ export default function Home() {
           <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
             <a href="/over-ons">Over Ons</a>
             <a href="/diensten">Diensten</a>
-            <a href="/projecten">Projecten</a>
+            <a href="/projecten">Projecten & Referenties </a>
             <a className="nav-cta" href="/offerte">
               Vraag Offerte Aan
             </a>
