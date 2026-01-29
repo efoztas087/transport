@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 const services = [
   {
     title: 'Nationaal Transport',
@@ -51,7 +53,24 @@ const projects = [
     text: 'Oversized cargo van Rotterdam naar Hamburg inclusief vergunningen.',
   },
 ];
+
 export default function Home() {
+const [verzonden, setVerzonden] = useState(false);
+
+async function handleSubmit(e) {
+  e.preventDefault();
+
+  const data = new FormData(e.target);
+
+  await fetch("https://formsubmit.co/info@miyatransport.nl", {
+    method: "POST",
+    body: data,
+  });
+
+  setVerzonden(true);
+  e.target.reset();
+}
+
   return (
     <div className="page">
       <header className="header">
@@ -317,8 +336,7 @@ export default function Home() {
             </div>
           </div>
           <form
-            action="https://formsubmit.co/info@miyatransport.nl"
-            method="POST"
+            onSubmit={handleSubmit}
             className="form-card"
           >
             <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag!" />
@@ -347,6 +365,12 @@ export default function Home() {
             <button type="submit" className="button primary full">
               Verstuur aanvraag
             </button>
+
+            {verzonden && (
+              <p style={{ marginTop: "1rem", color: "#16a34a", fontWeight: "600" }}>
+                ✅ Bedankt! Uw aanvraag is succesvol verzonden. Wij nemen zo snel mogelijk contact met u op.
+              </p>
+            )}
           </form>
         </div>
       </section>
